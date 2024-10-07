@@ -13,7 +13,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = lsp_servers,
+				ensure_installed = vim.list_extend(lsp_servers, formatters, linters),
 			})
 		end,
 	},
@@ -50,7 +50,6 @@ return {
 
 			null_ls.setup({
 				sources = sources,
-				ensure_installed = vim.list_extend(formatters, linters),
 			})
 		end,
 	},
