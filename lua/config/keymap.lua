@@ -20,6 +20,7 @@ vim.keymap.set("n", "<leader>vc", "<cmd>VenvSelectCached<cr>", {})
 vim.keymap.set("n", "<leader>r", function()
 	local cmdId
 	cmdId = vim.api.nvim_create_autocmd({ "CmdlineEnter" }, {
+
 		callback = function()
 			local key = vim.api.nvim_replace_termcodes("<C-f>", true, false, true)
 			vim.api.nvim_feedkeys(key, "c", false)
