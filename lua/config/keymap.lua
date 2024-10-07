@@ -16,6 +16,14 @@ vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 vim.keymap.set("n", "<leader>vs", "<cmd>VenvSelect<cr>", {})
 vim.keymap.set("n", "<leader>vc", "<cmd>VenvSelectCached<cr>", {})
 
+-- gitsigns
+local gitsigns = require("gitsigns")
+vim.keymap.set("n", "<leader>tb", gitsigns.toggle_current_line_blame, {})
+vim.keymap.set("n", "<leader>tfb", ":<C-U>Gitsigns blame<CR>", {})
+
+-- lazygit
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", {})
+
 -- renaming
 vim.keymap.set("n", "<leader>r", function()
 	local cmdId
