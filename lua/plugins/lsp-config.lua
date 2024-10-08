@@ -13,7 +13,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = vim.list_extend(lsp_servers, formatters, linters),
+				ensure_installed = vim.tbl_extend("keep", lsp_servers, formatters, linters),
 			})
 		end,
 	},
