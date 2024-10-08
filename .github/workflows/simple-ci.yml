@@ -19,4 +19,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
-          args: --check . --config-path ${{ github.workspace }}
+          args: --check . --config-path ${{ github.workspace }}/stylua.toml
