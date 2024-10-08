@@ -22,7 +22,7 @@ return {
 		"jay-babu/mason-null-ls.nvim",
 		config = function()
 			-- responsible for linters and formatters installation
-			local combined = vim.deepcoy(formatters)
+			local combined = vim.deepcopy(formatters)
 			vim.list_extend(combined, linters)
 
 			require("mason-null-ls").setup({
