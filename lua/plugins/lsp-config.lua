@@ -12,11 +12,24 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = vim.tbl_extend("keep", lsp_servers, formatters, linters),
-			})
+			-- responsible for lsps installation
+            require("mason-lspconfig").setup({
+				ensure_installed = lsp_servers,
+            })
 		end,
 	},
+    {
+        "jay-babu/mason-null-ls.nvim",
+        config = function ()
+            -- responsible for linters and formatters installation
+            local combined = vim.deepcoy(formatters)
+            vim.list_extend(combined, linters)
+
+            require("mason-null-ls").setup({
+                ensure_installed = combined,
+            })
+        end,
+    },
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
