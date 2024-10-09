@@ -38,8 +38,9 @@ return {
                         },
                         -- todo(ramon) take a look at persistence for session state
                         -- { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
-                        { action = "LazyExtras", desc = " Lazy Extras", icon = " ", key = "x" },
                         { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
+                        { action = "Mason", desc = " Mason", icon = " ", key = "m" },
+                        { action = "LazyGit", desc = " LazyGit", icon = "🗲 ", key = "m" },
                         { action = "qa", desc = " Quit", icon = " ", key = "q" },
                     },
 					footer = function()
