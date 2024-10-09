@@ -1,4 +1,4 @@
-local lsp_servers = { "lua_ls", "pyright", "terraformls" }
+local lsp_servers = { "lua_ls", "pyright", "terraformls", "rust_analyzer" }
 local formatters = { "stylua" }
 local linters = { "tflint" }
 
@@ -15,6 +15,7 @@ return {
 			-- responsible for lsps installation
 			require("mason-lspconfig").setup({
 				ensure_installed = lsp_servers,
+				automatic_installation = true,
 			})
 		end,
 	},
@@ -27,6 +28,7 @@ return {
 
 			require("mason-null-ls").setup({
 				ensure_installed = combined,
+				automatic_installation = true,
 			})
 		end,
 	},
@@ -82,5 +84,11 @@ return {
 				end,
 			})
 		end,
+	},
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^5",
+		lazy = false,
+		ft = "rust",
 	},
 }
