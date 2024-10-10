@@ -25,6 +25,13 @@ return {
 		telescope.setup({
 			defaults = {
 				path_display = { "smart" },
+				file_ignore_patterns = {
+					"venv/",
+					"__pycache__/",
+					"node_modules/",
+					"%.terraform/",
+					"%.git/",
+				},
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
