@@ -40,7 +40,7 @@ return {
                         -- { action = 'lua require("persistence").load()', desc = " Restore Session", icon = " ", key = "s" },
                         { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
                         { action = "Mason", desc = " Mason", icon = " ", key = "m" },
-                        { action = "LazyGit", desc = " LazyGit", icon = "🗲 ", key = "m" },
+                        { action = "LazyGit", desc = " LazyGit", icon = "🗲 ", key = "." },
                         { action = "qa", desc = " Quit", icon = " ", key = "q" },
                     },
 					footer = function()
