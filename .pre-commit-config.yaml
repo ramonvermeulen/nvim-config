@@ -1,7 +1,16 @@
-repos:
-- repo: https://github.com/JohnnyMorganz/StyLua
-  rev: v0.20.0
-  hooks:
-    - id: stylua
-      args: ["--config-path", "stylua.toml"]
+default_install_hook_types:
+  - pre-commit
+  - pre-push
+  - commit-msg
 
+repos:
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: "v3.29.1"
+    hooks:
+      - id: commitizen
+
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v0.20.0
+    hooks:
+      - id: stylua
+        args: ["--config-path", "stylua.toml"]

@@ -100,6 +100,7 @@ return {
 			end,
 			["yamlls"] = function()
 				lspconfig["yamlls"].setup({
+					capabilities = capabilities,
 					schemaStore = {
 						enable = true,
 						url = "https://www.schemastore.org/api/json/catalog.json",
