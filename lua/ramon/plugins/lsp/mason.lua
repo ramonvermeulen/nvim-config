@@ -35,6 +35,7 @@ return {
 				"tailwindcss",
 				"lua_ls",
 				"pyright",
+				"yamlls",
 			},
 		})
 		-- list of formatters and linters to install
