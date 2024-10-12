@@ -38,6 +38,13 @@ return {
 				}, {
 					{ name = "buffer" },
 				}),
+				formatting = {
+					format = function(entry, vim_item)
+						vim_item.menu = entry.source.name
+						return vim_item
+						-- code
+					end,
+				},
 			})
 		end,
 	},
