@@ -22,3 +22,7 @@ keymap.set("n", "<leader>r", function()
 		end
 	end, 500)
 end, {})
+
+-- buffers
+keymap.set("n", "<C-b>n", ":bNext<CR>", { desc = "Go to next Buffer" })
+keymap.set("n", "<C-b>p", ":bprevious<CR>", { desc = "Go to next Buffer" })

@@ -26,7 +26,7 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, {})
+		vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Lsp format (fallback)" })
 		vim.keymap.set({ "n", "v" }, "<leader>gf", function()
 			conform.format({
 				lsp_fallback = true,
