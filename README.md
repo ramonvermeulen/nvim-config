@@ -11,7 +11,7 @@ Should be cloned into: `~/.config/nvim`
 ## installation
 Run the following:
 ```bash
-git clone https://github.com/ramonvermeulen/pyenv-uninstall-global.git ~/config/nvim
+git clone https://github.com/ramonvermeulen/nvim-config.git ~/.config/nvim
 ```
 
 I use Ansible to manage my dotfiles, so I use this repo as git submodule [**here**](https://github.com/ramonvermeulen/dotfiles/tree/main/roles/neovim/files) to install my neovim configuration.
