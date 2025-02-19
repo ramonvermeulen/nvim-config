@@ -36,3 +36,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- options for quickscope to only enable on keypress
+vim.g.qs_highlight_on_keys = { "f", "F", "t", "T" }
+
